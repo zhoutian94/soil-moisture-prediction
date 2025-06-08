@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager" selected="JUnit.TimeOfArrivalJsonTest">
+    <configuration name="LoranServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loran_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loran_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loran_service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loran_service.LoranServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeOfArrivalJsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loran_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.loran_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.loran_service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.loran_service.TimeOfArrivalJsonTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TimeOfArrivalJsonTest" />
+        <item itemvalue="JUnit.LoranServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>

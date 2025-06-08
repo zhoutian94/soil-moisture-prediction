@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+
+    environment {
+        // 服务器IP
+        SERVER_IP = '1.14.33.41'
+        SSH_USER = 'ubuntu'
+        SSH_PASS = 'Qq942617'
+        // 远程脚本目录
+        SCRIPT_DIR = '/home/ubuntu/test/'
+        // 远程脚本名称
+        REMOTE_SCRIPT = 'deploy.sh'
+        // 代码仓库SSH地址
+        REPO_URL = "git@coding.net:uwiswork/uwisteam/loran_service_front.git"
+        // 代码目录
+        CODE_DIR = "/home/ubuntu/test/code"
+    }
+
+    stages {
+        stage('安装 sshpass') {
+            steps {
+                script {
+                    // 安装 sshpass
+                    sh '''
+                    sudo apt-get install -y sshpass
+                    '''
+                }
+            }
+        }
+
+        stage('执行远程脚本') {
+            steps {
+                script {
+                    // 使用 sshpass 和 ssh 执行远程脚本
+                    sh '''
+                    sshpass -p "${SSH_PASS}" ssh "${SSH_USER}@${SERVER_IP}" "bash ${SCRIPT_DIR}/${REMOTE_SCRIPT} ${REPO_URL} ${CODE_DIR}"
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+    }
+}
